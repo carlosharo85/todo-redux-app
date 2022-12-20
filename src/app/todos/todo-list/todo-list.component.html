@@ -1,4 +1,6 @@
 <ul class="todo-list">
-    <!-- `editing` `completed` -->
-    <app-todo-item></app-todo-item>
+    <app-todo-item
+        *ngFor="let item of arrayTodos | filtroTodo: filtroActual"
+        [todo]="item">
+    </app-todo-item>
 </ul>
